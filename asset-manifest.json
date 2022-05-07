@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Sokdak/static/css/main.6b127c5b.css",
+    "main.js": "/Sokdak/static/js/main.0249033d.js",
+    "index.html": "/Sokdak/index.html",
+    "main.6b127c5b.css.map": "/Sokdak/static/css/main.6b127c5b.css.map",
+    "main.0249033d.js.map": "/Sokdak/static/js/main.0249033d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6b127c5b.css",
+    "static/js/main.0249033d.js"
+  ]
+}
