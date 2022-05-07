@@ -20,7 +20,7 @@ const App = () => {
   },[])
   return (
     <>
-      {init ? <AppRouter isLoggendIn={isLoggendIn} userObj={userObj} /> : "로그인중..."}
+      {init ? <AppRouter isLoggendIn={isLoggendIn} userObj={userObj} /> : "기다려주세요..."}
     </>
   )
 }
