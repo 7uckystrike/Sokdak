@@ -5,7 +5,7 @@ import Navigation from "../components/Navigation";
 
 const AppRouter = ({ isLoggendIn, userObj }) => {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       {isLoggendIn && <Navigation userObj={userObj} />}
       <>
         {isLoggendIn ? (
