@@ -1,0 +1,61 @@
+@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background: #2ecc71;
+  font-family: 'Baloo Paaji', Verdana, Geneva, Tahoma, sans-serif;
+  height: 100%;
+  width: 100%;
+  display: felx;
+  justify-content: center;
+  margin: auto;
+  color: #fff;
+}
+
+ul, li {
+  padding:0px;
+  margin: 0px;
+  list-style: none;
+}
+
+input
+ {
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background: transparent;
+  border: 1px dotted #fff;
+  border-radius: 10px;
+  padding: 8px;
+  font-size: 10px;
+  font-family: Tahoma;
+}
+
+button {
+  color: #fff;
+  background: transparent;
+  border: none;
+  margin: auto;
+}
+
+body::-webkit-scrollbar {
+  width: 8px; 
+}
+
+body::-webkit-scrollbar-thumb {
+  height: 30%; 
+  background: #FFF;  
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #2ecc71
+}
+
+

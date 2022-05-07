@@ -1,0 +1,45 @@
+.Sokdak_box {
+  border: 1px dotted #fff;
+  border-radius: 10px;
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 5px 0 5px 0;
+}
+
+.Sokdak_text {
+  font-size: 14px;
+  margin: auto;
+  width: 500px;
+  height: auto;
+  text-align: left;
+  padding: 10px;
+}
+
+.Sokdak_btn {
+  display: block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.Sokdak_edit {
+  outline: none;
+  resize: none;
+  border: none;
+  background: transparent;
+  color: #fff;
+  width: 485px;
+  height: auto;
+  padding: 10px; 
+}
+
+.Sokdak_edit_box {
+  display: block;
+  margin: auto;
+}
+
+.Sokdak_edit_btn:first-child {
+  margin-right: 10px;
+}

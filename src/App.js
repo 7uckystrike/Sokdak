@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import AppRouter from "./routes/AppRouter";
+import { useState, useEffect } from "react"
+import { authService } from "./firebase";
 
-function App() {
+const App = () => {
+  const [init, setInit] = useState(false)
+  const [isLoggendIn, setIsLoggendIn] = useState(false);
+  const [userObj, setUserObj] = useState(null);
+
+  useEffect(() => {
+    authService.onAuthStateChanged((user) => {
+      if(user) {
+        setIsLoggendIn(true)
+        setUserObj(user)  
+      } else {
+        setIsLoggendIn(false)
+      }
+      setInit(true)
+    });
+  },[])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {init ? <AppRouter isLoggendIn={isLoggendIn} userObj={userObj} /> : "로그인중..."}
+    </>
+  )
 }
 
-export default App;
+export default App
