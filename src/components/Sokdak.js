@@ -1,14 +1,16 @@
 import "../styles/Sokdak.css"
-import { dbService } from "../firebase";
-import { doc, deleteDoc, updateDoc }from"firebase/firestore";
+import { dbService, storageServise } from "../firebase";
+import { doc, deleteDoc, updateDoc}from "firebase/firestore";
 import { FaCheck, FaHighlighter, FaTrashAlt, FaUndoAlt } from "react-icons/fa"
 import { useState } from "react"
+import { deleteObject, ref } from '@firebase/storage';
 
 const Sokdak = ({ isOwner, sokdakObj }) => {
   const [edit, setEdit] = useState(false)
   const [newText, setNewText] = useState("")
 
   const newTextRef = doc(dbService, "sdbox", `${sokdakObj.id}`)
+  const ImageRef = ref(storageServise, sokdakObj.attachmentUrl);
 
   const toggleEdit = () => {setEdit((prev) => !prev)}
 
@@ -25,6 +27,7 @@ const Sokdak = ({ isOwner, sokdakObj }) => {
     const ok = window.confirm("삭제삭제 슥싹슥싹");        
     if(ok) {
        await deleteDoc(newTextRef)
+       await deleteObject(ImageRef)
   }}
 
   const onChange = (event) => {
