@@ -1,11 +1,10 @@
 import "../styles/Home.css"
-import SokDak from "../components/Sokdak"
+import Twitter from "../components/Twitter"
 import { useState, useEffect, useRef } from "react"
 import { dbService, storageServise } from "../firebase"
 import { ref, uploadString, getDownloadURL } from 'firebase/storage'
 import { FaTrashAlt, FaCamera, FaRegPaperPlane } from "react-icons/fa"
 import { v4 as uuidv4 } from "uuid"
-
 
 
 const Home = ({ userObj }) => {
@@ -114,7 +113,7 @@ const Home = ({ userObj }) => {
         </form>
         <div>
           {sokdakText.map((sokdakText) => (
-            <SokDak key={sokdakText.id}  
+            <Twitter key={sokdakText.id}  
                     sokdakObj={sokdakText}
                     isOwner={sokdakText.creatorId === userObj.uid}
             />

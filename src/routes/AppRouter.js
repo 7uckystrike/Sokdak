@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Login from "./Login"
+import Auth from './Auth'
 import Home from "./Home"
 import Navigation from "../components/Navigation";
 
@@ -14,7 +14,7 @@ const AppRouter = ({ isLoggendIn, userObj }) => {
           </Routes>
         ) : (
           <>
-            <Login />
+            <Auth />
           </>
         )}
       </>

@@ -1,4 +1,6 @@
-@import 'https://fonts.googleapis.com/css?family=Baloo+Paaji';
+/* @import 'https://fonts.googleapis.com/css?family=Baloo+Paaji'; */
+
+@import 'https://fonts.googleapis.com/css2?family=Fugaz+One&family=Righteous&display=swap';
 
 * {
   margin: 0;
@@ -8,13 +10,10 @@
 
 body {
   text-align: center;
-  background: #2ecc71;
-  font-family: 'Baloo Paaji', Verdana, Geneva, Tahoma, sans-serif;
+  background: #01985a;
+  font-family: 'Fugaz One', Verdana, Geneva, Tahoma, sans-serif;
   height: 100%;
   width: 100%;
-  display: felx;
-  justify-content: center;
-  margin: auto;
   color: #fff;
 }
 
@@ -24,24 +23,16 @@ ul, li {
   list-style: none;
 }
 
-input
- {
+input {
   text-decoration: none;
   outline: none;
-  color: #fff;
-  background: transparent;
-  border: 1px dotted #fff;
-  border-radius: 10px;
   padding: 8px;
-  font-size: 10px;
+  font-size: 13px;
   font-family: Tahoma;
 }
 
 button {
-  color: #fff;
-  background: transparent;
   border: none;
-  margin: auto;
 }
 
 body::-webkit-scrollbar {

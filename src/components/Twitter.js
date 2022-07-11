@@ -5,7 +5,7 @@ import { FaCheck, FaHighlighter, FaTrashAlt, FaUndoAlt } from "react-icons/fa"
 import { useState } from "react"
 import { deleteObject, ref } from '@firebase/storage';
 
-const Sokdak = ({ isOwner, sokdakObj }) => {
+const Twitter = ({ isOwner, sokdakObj }) => {
   const [edit, setEdit] = useState(false)
   const [newText, setNewText] = useState("")
 
@@ -24,7 +24,7 @@ const Sokdak = ({ isOwner, sokdakObj }) => {
   }
 
   const onDeleteClick = async () => { 
-    const ok = window.confirm("삭제삭제 슥싹슥싹");        
+    const ok = window.confirm("정말 지우시겠습니까?");        
     if(ok) {
        await deleteDoc(newTextRef)
        await deleteObject(ImageRef)
@@ -67,9 +67,7 @@ const Sokdak = ({ isOwner, sokdakObj }) => {
               {isOwner && (
                 <>
                   <button onClick={toggleEdit} style={{marginRight:"10px"}}><FaHighlighter /></button>
-                  <button onClick={onDeleteClick}><FaTrashAlt /></button>
-                  <button onClick={toggleEdit}>//댓글</button>
-                </>
+                  <button onClick={onDeleteClick}><FaTrashAlt /></button>                </>
               )}
             </div>
           </div>
@@ -78,4 +76,4 @@ const Sokdak = ({ isOwner, sokdakObj }) => {
     </>
   )}
 
-export default Sokdak
+export default Twitter
