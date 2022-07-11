@@ -9,7 +9,6 @@ const Auth = () => {
   const [newAccount, setNewAccount] = useState(true);
   const [error, setError] = useState('');
 
-
   const onChange = (e) => {
     const {target: {name, value}} = e;
     if (name === 'email') {
@@ -43,7 +42,7 @@ const Auth = () => {
     if (name === 'google') {
       provider = new firebaseinstance.auth.GoogleAuthProvider();
     }
-    const data= await authService.signInWithPopup(provider);
+    const data = await authService.signInWithPopup(provider);
     console.log(data)
   }
 

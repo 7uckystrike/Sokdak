@@ -11,10 +11,11 @@
 body {
   text-align: center;
   background: #01985a;
-  font-family: 'Fugaz One', Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   height: 100%;
   width: 100%;
-  color: #fff;
+  font-size: 10px;
+  color: brown;
 }
 
 ul, li {

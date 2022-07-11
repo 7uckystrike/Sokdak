@@ -1,4 +1,4 @@
-import "../styles/Sokdak.css"
+import "../styles/Twitter.css"
 import { dbService, storageServise } from "../firebase";
 import { doc, deleteDoc, updateDoc}from "firebase/firestore";
 import { FaCheck, FaHighlighter, FaTrashAlt, FaUndoAlt } from "react-icons/fa"

@@ -1,3 +1,6 @@
+@import 'https://fonts.googleapis.com/css2?family=Fugaz+One&family=Righteous&display=swap';
+
+
 .Login_main_div {
   position: absolute;
   top: 50%;
@@ -9,7 +12,7 @@
   width: 450px;
   height: 600px;
   border-radius: 15px;
-  border: 3px solid #000;
+  border: 4px solid #000;
 }
 
 .Login_twt_logo {
@@ -21,6 +24,7 @@
 .Login_twt_title {
   font-size: 33px;
   color: #393fba;
+  font-family: 'Fugaz One', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .Login_form {
@@ -56,6 +60,7 @@
   margin-top: 13px;
   text-decoration: underline;
   cursor: pointer;
+  font-size: 15px;
 }
 
 span {
@@ -68,7 +73,7 @@ span {
 }
 
 button {
-  font-size: 14px;
+  font-size: 13px;
   background-color: transparent;
   color: #393fba;
 }
