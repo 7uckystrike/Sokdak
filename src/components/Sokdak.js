@@ -68,6 +68,7 @@ const Sokdak = ({ isOwner, sokdakObj }) => {
                 <>
                   <button onClick={toggleEdit} style={{marginRight:"10px"}}><FaHighlighter /></button>
                   <button onClick={onDeleteClick}><FaTrashAlt /></button>
+                  <button onClick={toggleEdit}>//댓글</button>
                 </>
               )}
             </div>
