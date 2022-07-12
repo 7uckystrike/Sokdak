@@ -1,16 +1,23 @@
-.Nav_box {
-  display: flex;
-  justify-content: flex-end;
-  justify-items: center;
-  margin-top: 20px;
-  margin-right: 30px;
-  text-decoration: none;
-  color: #fff;
-  background: transparent;
-  border: 1px dotted #fff;
-  border-radius: 10px;
-  padding: 8px;
-  font-size: 10px;
-  font-family: Tahoma;
+.Nav-div {
+  width: 400px;
+  margin: auto;
 }
 
+.Nav-content {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+}
+
+
+.Nav-logo, 
+.Nav-profile,
+.Nav-logout {
+  background: #f96100;
+  width: 45px;
+  height: 30px;
+  font-size: 10px;
+  color: #fff;
+  border-top-left-radius: 4px;
+  margin-left: 5px;
+}

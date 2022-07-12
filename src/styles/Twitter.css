@@ -1,45 +1,52 @@
-.Sokdak_box {
-  border: 1px dotted #fff;
-  border-radius: 10px;
-  width: 500px;
+.Edit-div {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  margin-bottom: 30px;
-  padding: 5px 0 5px 0;
+  align-items: center;
+  margin-left: 10px;
 }
 
-.Sokdak_text {
-  font-size: 14px;
-  margin: auto;
-  width: 500px;
-  height: auto;
-  text-align: left;
-  padding: 10px;
-}
-
-.Sokdak_btn {
-  display: block;
-  text-align: right;
-  margin-right: 10px;
-}
-
-.Sokdak_edit {
-  outline: none;
+.Edit-area {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #d4d2d2bc;
+  border-radius: 3px;
   resize: none;
-  border: none;
-  background: transparent;
-  color: #fff;
-  width: 485px;
-  height: auto;
-  padding: 10px; 
+  outline: none;
+  padding: 5px;
+  margin-top: 10px;
+  text-align: right;
 }
 
-.Sokdak_edit_box {
-  display: block;
-  margin: auto;
+.Edit-btn {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
 }
 
-.Sokdak_edit_btn:first-child {
+.Twitter-main {
+  border-bottom: 1px solid #d4d2d2bc;
+  margin-left: 10px;
+}
+
+.Twitter-title {
+  margin: 20px 0;
+  font-size: 13px;
+  text-align: left;
+}
+
+.Twitter-btn {
+  color:#d4d2d2bc;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.Btn-icon {
+  font-size: 20px;  
+  color: #969696bc;
+}
+
+.Btn-heart {
   margin-right: 10px;
+  font-size: 15px;
 }

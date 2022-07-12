@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { authService, firebaseinstance } from '../firebase' 
 import { RiTwitterLine } from 'react-icons/ri'
+
 import '../styles/Auth.css'
 
 const Auth = () => {

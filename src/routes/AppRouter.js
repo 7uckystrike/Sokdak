@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Auth from './Auth'
-import Home from "./Home"
+import Home from './Home'
+import Profile from "./Profile";
 import Navigation from "../components/Navigation";
 
 const AppRouter = ({ isLoggendIn, userObj }) => {
@@ -11,6 +12,7 @@ const AppRouter = ({ isLoggendIn, userObj }) => {
         {isLoggendIn ? (
           <Routes>
             <Route path="/" element={<Home userObj={userObj}/>} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         ) : (
           <>

@@ -1,0 +1,46 @@
+.Create-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid #d4d2d2bc;
+  margin-left: 10px;
+}
+
+.Create-area {
+  width: 400px;
+  height: 60px;
+  border: 1px solid #d4d2d2bc;
+  border-radius: 3px;
+  resize: none;
+  outline: none;
+  padding: 5px;
+}
+
+.Create-img {
+  margin: 10px 0 5px 330px;
+}
+
+.Create-icon {
+  font-size: 20px;
+  margin-left: 12px;
+  color: #000;
+}
+
+.File-box {
+  position: relative;
+}
+
+.File-img {
+  display: block;
+  width: 320px;
+  height: 200px;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.Btn-cancel {
+  font-size: 30px;
+  position: absolute;
+  bottom: 150px;
+  right: 280px;
+}
