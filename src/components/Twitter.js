@@ -40,7 +40,6 @@ const Twitter = ({ isOwner, sokdakObj }) => {
     setNewText(value)
   }
   // 좋아요
-
   const onHeartClick = () => {
     if(button === "🤍") {
       setButton("💛")
@@ -48,6 +47,18 @@ const Twitter = ({ isOwner, sokdakObj }) => {
       setButton("🤍")
     }
   }
+
+  //시계
+  const getTweetDate = () => {
+    const createdDate = new Date(sokdakObj.createdAt);
+    const year = createdDate.getFullYear();
+    const month = createdDate.getMonth() + 1;
+    const date = createdDate.getDate();
+    const hours = String(createdDate.getHours()).padStart(2, '0');
+    const minutes = String(createdDate.getMinutes()).padStart(2, '0');
+
+    return `${year}.${month}.${date} ${hours}:${minutes}`;
+  };
 
   return(
     <div>
@@ -72,6 +83,9 @@ const Twitter = ({ isOwner, sokdakObj }) => {
       ) : (
         <>
           <div className='Twitter-main'>
+            <div>
+              <span className="Twitter-date">{getTweetDate()}</span>
+            </div>
             <div className='Twitter-title'>
               {sokdakObj.text}
             </div>
