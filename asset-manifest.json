@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Sokdak/static/css/main.c07354e9.css",
-    "main.js": "/Sokdak/static/js/main.92b4ceed.js",
+    "main.css": "/Sokdak/static/css/main.688e689b.css",
+    "main.js": "/Sokdak/static/js/main.277e93f9.js",
     "index.html": "/Sokdak/index.html",
-    "main.c07354e9.css.map": "/Sokdak/static/css/main.c07354e9.css.map",
-    "main.92b4ceed.js.map": "/Sokdak/static/js/main.92b4ceed.js.map"
+    "main.688e689b.css.map": "/Sokdak/static/css/main.688e689b.css.map",
+    "main.277e93f9.js.map": "/Sokdak/static/js/main.277e93f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.c07354e9.css",
-    "static/js/main.92b4ceed.js"
+    "static/css/main.688e689b.css",
+    "static/js/main.277e93f9.js"
   ]
 }
