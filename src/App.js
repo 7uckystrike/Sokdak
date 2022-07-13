@@ -2,6 +2,7 @@ import AppRouter from "./routes/AppRouter";
 import { useState, useEffect } from "react"
 import { authService } from "./firebase";
 
+
 const App = () => {
   const [init, setInit] = useState(false)
   const [isLoggendIn, setIsLoggendIn] = useState(false);
@@ -33,7 +34,7 @@ const App = () => {
   }
   return (
     <>
-      {init ? <AppRouter isLoggendIn={isLoggendIn} userObj={userObj} refreshUser={refreshUser} /> : "잠시만 기다려주세요!"}
+      {init ? <AppRouter isLoggendIn={isLoggendIn} userObj={userObj} refreshUser={refreshUser} /> : ''}
     </>
   )
 }
