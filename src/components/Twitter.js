@@ -3,7 +3,7 @@ import { dbService, storageServise } from '../firebase';
 import { doc, deleteDoc, updateDoc }from 'firebase/firestore';
 import { deleteObject, ref } from '@firebase/storage';
 import { BiEdit, BiTrash, BiPlus, BiRightArrowAlt } from 'react-icons/bi'
-import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
+
 
 import '../styles/Twitter.css'
 
@@ -16,6 +16,8 @@ const Twitter = ({ isOwner, sokdakObj }) => {
   const ImageRef = ref(storageServise, sokdakObj.attachmentUrl);
 
   const toggleEdit = () => {setEdit((prev) => !prev)}
+
+  console.log(sokdakObj.creatorName)
 
   const onSubmit = async(event) => {
     event.preventDefault();
@@ -47,6 +49,8 @@ const Twitter = ({ isOwner, sokdakObj }) => {
       setButton("🤍")
     }
   }
+
+
 
   //시계
   const getTweetDate = () => {

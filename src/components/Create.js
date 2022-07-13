@@ -30,6 +30,7 @@ const Create = ({ userObj }) => {
       text: sokdak,
       createdAt: Date.now(),
       creatorId: userObj.uid,
+      creatorName: userObj.displayName,
       fileUrl
     }
   

@@ -4,15 +4,15 @@ import Home from './Home'
 import Profile from "./Profile";
 import Navigation from "../components/Navigation";
 
-const AppRouter = ({ isLoggendIn, userObj }) => {
+const AppRouter = ({ isLoggendIn, userObj, refreshUser }) => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      {isLoggendIn && <Navigation userObj={userObj} />}
+      {isLoggendIn && <Navigation />}
       <>
         {isLoggendIn ? (
           <Routes>
             <Route path="/" element={<Home userObj={userObj}/>} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path="/profile" element={<Profile userObj={userObj} refreshUser={refreshUser} />} />
           </Routes>
         ) : (
           <>

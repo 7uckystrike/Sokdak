@@ -14,6 +14,7 @@ const Home = ({ userObj }) => {
         ...doc.data(),
       }))
       setSokdakText(sdboxArray);
+      console.log(sokdakText)
     })
   }, [])
 
@@ -25,8 +26,6 @@ const Home = ({ userObj }) => {
           <Twitter key={sokdakText.id}
                    sokdakObj={sokdakText}
                    isOwner={sokdakText.creatorId === userObj.uid}
-                   likedUser={sokdakText.likeUsers?.includes(userObj.uid)}
-                   userId={userObj.uid}
           />
         ))}
       </div>
