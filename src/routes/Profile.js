@@ -4,8 +4,6 @@ import { authService } from '../firebase'
 import { updateProfile } from '@firebase/auth';
 import '../styles/Profile.css'
 
-
-
 const Profile = ({ userObj, refreshUser }) => {
 
   const [newDisplayName, setNewDispalyName] = useState(userObj.displayName)

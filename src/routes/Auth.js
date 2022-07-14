@@ -51,7 +51,7 @@ const Auth = () => {
     <div className='Login_main_div'>
       <RiTwitterLine className='Login_twt_logo' />
       <p className='Login_twt_title'>
-        Clone Twitter
+        Twitter SokDak
       </p>
       <form onSubmit={onSubmit} className='Login_form'>
         <input 
