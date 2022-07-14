@@ -3,7 +3,7 @@
 <br />
 
 ### Demo
-https://7uckystrike.github.io/sokdak/
+https://7uckystrike.github.io/Sokdak/
 
 <br />
 
