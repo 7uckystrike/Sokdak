@@ -14,4 +14,5 @@ https://7uckystrike.github.io/Sokdak/
 <br />
 
 ### Preview
-
+<img src="https://github.com/7uckystrike/Sokdak/blob/master/preview/login.png?raw=true" alt="인덱스화면" />
+<img src="https://github.com/7uckystrike/Sokdak/blob/master/preview/tweet.png?raw=true" alt="트윗화면" />
