@@ -7,12 +7,12 @@ import Navigation from "../components/Navigation";
 const AppRouter = ({ isLoggendIn, userObj, refreshUser }) => {
   return (
     <Router basename={process.env.PUBLIC_URL}>
-      {isLoggendIn && <Navigation />}
+      {isLoggendIn && <Navigation userObj={userObj} />}
       <>
         {isLoggendIn ? (
           <Routes>
             <Route path="/" element={<Home userObj={userObj}/>} />
-            <Route path="/profile" element={<Profile userObj={userObj} refreshUser={refreshUser} />} />
+            <Route path="/:uid" element={<Profile userObj={userObj} refreshUser={refreshUser} />} />
           </Routes>
         ) : (
           <>

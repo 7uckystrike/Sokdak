@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { GrStreetView } from 'react-icons/gr'
+import { authService } from '../firebase'
+import { updateProfile } from '@firebase/auth';
 import '../styles/Profile.css'
 
 
@@ -7,18 +9,19 @@ import '../styles/Profile.css'
 const Profile = ({ userObj, refreshUser }) => {
 
   const [newDisplayName, setNewDispalyName] = useState(userObj.displayName)
-
+  
   const onSubmit = async (e) => {
     e.preventDefault();
 
     if (userObj.displayName !== newDisplayName) {
-      await userObj.updateProfile({
+      await updateProfile(authService.currentUser, {
         displayName: newDisplayName
       });
       refreshUser();
+      console.log(userObj.uid, newDisplayName);
     }
-  }
-
+  }  
+  
   const onChange = (e) => {
     const {
       target: { value }, 
@@ -45,7 +48,6 @@ const Profile = ({ userObj, refreshUser }) => {
             className='User-btn'/>
         </form>
       </div>
-
     </div>
   )
 }

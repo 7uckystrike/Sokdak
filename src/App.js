@@ -13,12 +13,13 @@ const App = () => {
       if(user) {
         setIsLoggendIn(true)
         setUserObj({
-          displayName: user.displayName,
+          displayName: user.displayName ? user.displayName : user.uid.slice(0, 9),
           uid: user.uid,
           updateProfile: (args) => user.updateProfile(args)
         });
       } else {
         setIsLoggendIn(false)
+        setUserObj(null)
       }
       setInit(true)
     });

@@ -4,7 +4,7 @@ import { RiTwitterLine } from 'react-icons/ri'
 
 import '../styles/Navigation.css'
 
-const Navigation = () => {
+const Navigation = ({ userObj }) => {
   const navigate = useNavigate();
 
   const onLogOutClick = () => {
@@ -17,7 +17,7 @@ const Navigation = () => {
   }
 
   const onProfileClick = () => {
-    navigate('/profile')
+    navigate(`/${userObj.uid}`)
   }
 
 
@@ -27,9 +27,12 @@ const Navigation = () => {
         <div>
           <button className='Nav-logo' onClick={onHomeClick}>홈</button>
         </div>
-        <div>
-          <button className='Nav-profile' onClick={onProfileClick}>내정보</button>
-        </div>
+        { userObj && (
+          <div>
+            <button className='Nav-profile' onClick={onProfileClick}>내정보</button>
+          </div>
+        )}
+
         <div>
           <button className='Nav-logout' onClick={onLogOutClick}>로그아웃</button>
         </div>

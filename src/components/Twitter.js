@@ -9,15 +9,13 @@ import '../styles/Twitter.css'
 
 const Twitter = ({ isOwner, sokdakObj }) => {
   const [edit, setEdit] = useState(false)
-  const [newText, setNewText] = useState('')
+  const [newText, setNewText] = useState(sokdakObj.text)
   const [button, setButton] = useState("🤍")
 
   const newTextRef = doc(dbService, 'sdbox', `${sokdakObj.id}`)
   const ImageRef = ref(storageServise, sokdakObj.attachmentUrl);
 
   const toggleEdit = () => {setEdit((prev) => !prev)}
-
-  console.log(sokdakObj.creatorName)
 
   const onSubmit = async(event) => {
     event.preventDefault();
@@ -87,30 +85,31 @@ const Twitter = ({ isOwner, sokdakObj }) => {
       ) : (
         <>
           <div className='Twitter-main'>
-            <div>
-              <span className="Twitter-date">{getTweetDate()}</span>
-            </div>
+            <div className='Twitter-content'>
+              <div className='Twitter-view'>
+                <p className="Twitter-nickname">{sokdakObj.creatorName}</p> 
+                <p className="Twitter-date">{getTweetDate()}</p>
+              </div>
+                {isOwner && (
+                  <div className='Twitter-view'>
+                    <button onClick={toggleEdit} className='Btn-icon' style={{marginRight:'5px'}}><BiEdit /></button>
+                    <button onClick={onDeleteClick} className='Btn-icon'><BiTrash /></button>              
+                  </div>
+                 )}
+              </div>
             <div className='Twitter-title'>
               {sokdakObj.text}
             </div>
             <div>
               {sokdakObj.fileUrl && <img src={sokdakObj.fileUrl} width="250px" height="auto" />} 
             </div>
-            <>
-              {isOwner && (
-                <div className='Twitter-btn'>
-                  <div>
-                    <button onClick={toggleEdit} className='Btn-icon' style={{marginRight:'5px'}}><BiEdit /></button>
-                    <button onClick={onDeleteClick} className='Btn-icon'><BiTrash /></button>              
-                  </div>
-                  <div>
+            <div className='Twitter-like'>
+                <div>
                   <button className='Btn-heart' onClick={onHeartClick}>{button}</button>
-                  </div> 
-                </div>           
-              )}
-            </>
+                </div> 
+            </div>           
           </div>
-        </>
+        </>  
       )}
     </div>
   )}

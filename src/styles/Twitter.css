@@ -14,7 +14,7 @@
   outline: none;
   padding: 5px;
   margin-top: 10px;
-  text-align: right;
+  text-align: left;
 }
 
 .Edit-btn {
@@ -28,26 +28,42 @@
   margin-left: 10px;
 }
 
+.Twitter-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Twitter-view {
+  display: flex;
+  align-items: center;
+  padding-top: 13px;
+}
+
 .Twitter-title {
   margin: 20px 0;
   font-size: 13px;
   text-align: left;
 }
 
-.Twitter-date {
-  width: 80px;
-  margin: 0;
-  margin-top: 10px;
-  background-color: #d4d2d2bc;
-  font-size: 10px;
+.Twitter-nickname {
+  color: #393fba;
+  font-size: 14px;
+  font-weight: 700;
   letter-spacing: -0.05em;
-  border: none;
 }
 
-.Twitter-btn {
+.Twitter-date {
+  font-size: 10px;
+  margin-left: 10px;
+  color: #969696bc
+}
+
+.Twitter-like {
   color:#d4d2d2bc;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end ;
+  margin-bottom: 5px;
 }
 
 

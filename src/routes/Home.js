@@ -26,6 +26,7 @@ const Home = ({ userObj }) => {
           <Twitter key={sokdakText.id}
                    sokdakObj={sokdakText}
                    isOwner={sokdakText.creatorId === userObj.uid}
+                   userId={userObj.uid}
           />
         ))}
       </div>
